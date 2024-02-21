@@ -16,8 +16,7 @@ The repository is organised as follows:
 		  - `splits/`: train, dev and test splits to train and evaluate in English `en/` and Spanish `es/`.	
 	- `interpretation/`: all files in .tsv format with following fields: `{language}`: en or es; `{gold_label}`: inference label from original dataset: [entailment, neutral or contradiction]; `{sentence1}`: premise; `{sentence2}`: hypothesis; `{promptID}`: premise identifier number_{source_dataset}; `{pairID}`: premise and hypothesis          pair identifier number_{source_dataset}; `{genre}`: text domain labeled from original dataset annotations; `{source_dataset}`: original dataset to which the pair belongs.
 	    - `source_datasets/`: each file includes sentences in English and Spanish: `{source_dataset}_met.tsv`: files with pairs with metaphors; `{source_dataset}_no_met.tsv`: files with pairs without metaphors.
-	    - `splits`:
-           - `en/`, `es/`: train, dev and test splits with and without metaphors in each language.
+	    - `splits`: train, dev and test splits with and without metaphors, both languages in the same file. The language must be specified in argument `dataset_config_name` of `fine-tuning-nli.sh` file.
 
 
 
